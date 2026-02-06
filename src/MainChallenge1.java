@@ -3,36 +3,24 @@ public class MainChallenge1 {
     public static void main(String[] args) {
 
 
-        boolean gameOver = true;
-        int score = 800;
-        int levelCompleted = 5;
-        int bonus = 100;
+        int highScore = calculateScore(true, 800, 5, 100);
+        System.out.println("The highScore is " + highScore);
 
-        int finaLScore = score;
-
-        calculateScore(gameOver = true, );
-
-
-        score = 10000;
-        levelCompleted = 8;
-        bonus = 200;
-
-        finaLScore = score;
-
-        if (gameOver) {
-            finaLScore += (levelCompleted * bonus);
-            System.out.println("Your final boss " + finaLScore);
-        }
+        System.out.println("The next highScore is " +
+        calculateScore(true,10000, 8, 200));
 
     }
 
-    public static void calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
+    public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
 
-        int finaLScore = score;
+        int finalScore = score;
 
         if (gameOver) {
-            finaLScore += (levelCompleted * bonus);
-            System.out.println("Your final boss " + finaLScore);
+            finalScore += (levelCompleted * bonus);
+            System.out.println("Your final score was " + finalScore);
+
         }
+
+        return finalScore;
     }
 }
