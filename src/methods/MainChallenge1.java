@@ -1,3 +1,5 @@
+package methods;
+
 public class MainChallenge1 {
 
     public static void main(String[] args) {
