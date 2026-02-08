@@ -1,3 +1,5 @@
+package basics;
+
 public class ConditionalLogic {
 
     public static void main(String[] args) {
