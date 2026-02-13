@@ -10,12 +10,20 @@ public class challengeUsingReadingInput1 {
 
 
         int  counter = 0;
-        int sum = 0;
+        double sum = 0;
 
         while(counter <= 5){
             System.out.println("Enter number #" + counter + ":");
             String nextNumber = scanner.nextLine();
-            counter++;
+            try{
+//                int number = Integer.parseInt(nextNumber);
+                double number = Double.parseDouble(nextNumber);
+                counter++;
+                sum += number;
+            } catch(NumberFormatException nfe){
+                System.out.println("Invalid Number");
+            }
+
         }
     }
 
