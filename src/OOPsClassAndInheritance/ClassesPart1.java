@@ -13,6 +13,15 @@ public class ClassesPart1 {
         System.out.println("make = " + car.getMake());
         System.out.println("model = " + car.getModel());
         car.describeCar();
+
+        Car targa = new Car();
+        car.setMake("Porsche");
+        car.setModel("Carrera");
+        car.setColor("Red");
+        car.setDoors(2);
+        car.setConvertible(true);
+
+        targa.describeCar();
     }
 
 }
