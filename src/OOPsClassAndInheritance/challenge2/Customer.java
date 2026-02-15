@@ -6,6 +6,13 @@ public class Customer {
     private double creditLimit;
     private String email;
 
+    public Customer(){
+        this("nobody", "nobody@nowwhere.com");
+    }
+    public Customer(String name, String email) {
+        this(name, 1000, email);
+    }
+
     public Customer(String name, double creditLimit, String email) {
         this.name = name;
         this.creditLimit = creditLimit;
