@@ -1,5 +1,11 @@
 package OOPsClassAndInheritance;
 
+//Public:- public means any other class in any package can access this class.
+//Protected:- protected allow classes in the same package and any sub classes in other packages to have access to the member
+//when the modifier is omitted this has special meaning called package access
+//meaning the member is accessible only to classes in the same package.
+//Private:- private means that no other class can access this member
+
 public class Car {
 
     private String make = "Tesla";
