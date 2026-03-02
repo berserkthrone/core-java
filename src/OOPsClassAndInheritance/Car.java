@@ -14,6 +14,9 @@ public class Car {
     private int doors = 2;
     private boolean convertible = true;
 
+    // unlike local variables the above ones are class variables
+    // need access modifiers
+
     public String getMake() {
         return make;
     }
