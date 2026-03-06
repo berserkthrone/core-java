@@ -1,0 +1,221 @@
+1. Class = Blueprint
+
+A class defines what an object will look like.
+
+Example:
+
+class Car {
+
+}
+
+This is just a design.
+No car exists yet.
+
+Think:
+
+Class = blueprint of a car
+Object = actual car built from blueprint
+2. Fields (Object Data)
+
+Fields describe what the object stores.
+
+They go inside the class but outside methods.
+
+Example:
+
+class Car {
+
+    private String make;
+    private String color;
+    private int doors;
+
+}
+
+These are properties of every car.
+
+Example objects:
+
+Car1 → make=Tesla color=Black doors=4
+Car2 → make=Porsche color=Red doors=2
+
+Each object has its own copy.
+
+Rule:
+
+Fields → inside class
+Fields → outside methods
+3. Methods (Object Behaviour)
+
+Methods describe what the object can do.
+
+Example:
+
+class Car {
+
+    private String make;
+
+    public void setMake(String make){
+        this.make = make;
+    }
+
+}
+
+This method changes the state of the object.
+
+Rule:
+
+Methods → inside class
+Methods → outside other methods
+
+You cannot place a method inside another method.
+
+4. Methods Contain Statements
+
+Inside methods you write actual executable code.
+
+Example:
+
+public void setMake(String make){
+    this.make = make;
+}
+
+Inside the method:
+
+assignment
+calculations
+conditions
+loops
+5. main() Method (Program Entry)
+
+Java programs start from:
+
+public static void main(String[] args)
+
+This method is where you create objects and run code.
+
+Example:
+
+public class Main {
+
+    public static void main(String[] args){
+
+        Car car1 = new Car();
+        car1.setMake("Tesla");
+
+    }
+}
+
+Flow:
+
+Program starts
+↓
+main() runs
+↓
+object created
+↓
+methods called
+6. Full Structure (Most Important Part)
+
+A normal class looks like this:
+
+class Example {
+
+    // 1 Fields
+    int a;
+    int b;
+
+    // 2 Methods
+    void setA(int value){
+        a = value;
+    }
+
+    int getSum(){
+        return a + b;
+    }
+
+}
+
+Structure:
+
+Class
+ ├── Fields
+ └── Methods
+       └── Statements
+7. Where Objects Are Created
+
+Objects are usually created inside main() or another method.
+
+Example:
+
+public class Test {
+
+    public static void main(String[] args){
+
+        SimpleCalculator calc = new SimpleCalculator();
+
+    }
+
+}
+
+Here:
+
+Class SimpleCalculator → blueprint
+calc → actual object
+8. Simple Visual Model
+
+Think like this:
+
+CLASS
+ ├─ Fields (data)
+ │    make
+ │    doors
+ │
+ ├─ Methods (behaviour)
+ │    setMake()
+ │    getMake()
+ │
+ └─ main() (runs program)
+
+9. Example Using Your Calculator
+
+Blueprint:
+
+class SimpleCalculator {
+
+    double firstNumber;
+    double secondNumber;
+
+    double getAdditionResult(){
+        return firstNumber + secondNumber;
+    }
+
+}
+
+Running code:
+
+public class Main {
+
+    public static void main(String[] args){
+
+        SimpleCalculator calc = new SimpleCalculator();
+
+        calc.firstNumber = 5;
+        calc.secondNumber = 4;
+
+        System.out.println(calc.getAdditionResult());
+
+    }
+
+}
+
+Output: 9
+
+10. Quick Rule That Removes 90% of Confusion
+
+Ask yourself:
+
+Question	Where it goes
+What data does an object store?	Field
+What can the object do?	Method
+Where does the program start?	main()
+Where do objects get created?	inside methods
