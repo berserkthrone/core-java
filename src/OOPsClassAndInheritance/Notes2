@@ -1,46 +1,62 @@
-//Public:- public means any other class in any package can access this class.
-//Protected:- protected allow classes in the same package and any sub classes in other packages to have access to the member
-//when the modifier is omitted this has special meaning called package access
-//meaning the member is accessible only to classes in the same package.
-//Private:- private means that no other class can access this member
+Public:- public means any other class in any package can access this class.
+Protected:- protected allow classes in the same package and any sub classes in other packages to have access to the member
+when the modifier is omitted this has special meaning called package access
+meaning the member is accessible only to classes in the same package.
+Private:- private means that no other class can access this member
 
-// unlike local variables the above ones are class variables
-    // need access modifiers
+ unlike local variables the above ones are class variables
+  need access modifiers
 
-    //so we are using private classes variables which be access easily
-    //although we can use public classes but it aint a good practise
-    //so we need getter and setters
-    //GETTER :- is a method on a class that retrieves the value of a
-    // private field and returns it.
-    //SETTER :- is a method on a class that sets the value of a private field
-    // the purpose of these methods is to control and protect access to private fields
+    so we are using private classes variables which be access easily
+    although we can use public classes but it aint a good practise
+    so we need getter and setters
+GETTER :- is a method on a class that retrieves the value of a
+private field and returns it.
 
-
-    // This provides encapsulation of the internals of our class and supports
-    //maintenance of a public interface that does not have to change even though our class might.
+SETTER :- is a method on a class that sets the value of a private field
+the purpose of these methods is to control and protect access to private fields
 
 
-    //This :- ia a special keyword in java. What it really refers to is the instance
-    //that was created when the object was instantiated.
-    //So, "THIS" is a special reference name for the object or instance, ehich it can use
-    // to describe itself.
-    //And we can use "THIS" to access fields on the class.
+This provides encapsulation of the internals of our class and supports
+maintenance of a public interface that does not have to change even though our class might.
 
-  //Constructor:- is used in the creation of an object.
-    //It is a special type of code block that has a specific name and parameters,
-    //much like a method.
-    //it has the same name as the class itself, and it does not return any values.
-    //You never include a return type from a constructor, not even void.
-    //you can, and should, specify an appropriate access modifier to control who
-    //should be able to create new instances of the class, using this constructor.
-    //if a class contains no constructor declarations, then a default constructor is
-    //implicitly declared.
-    //This constructor has no parameters and is
-    //often called the no-args(no arguments) constructor.
-    //If a class contains any other constructor declarations, then a default constructor
-    //is NOT implicitly declared.
 
-    //CONSTRUCTOR OVERLOADING is declaring multiple
-    //constructors with different parameters.
-    //The number of parameters is the same between two constructors, their types,
-    //or order of the types must differ.
+This :- ia a special keyword in java. What it really refers to is the instance
+that was created when the object was instantiated.
+So, "THIS" is a special reference name for the object or instance, hich it can use
+to describe itself.
+And we can use "THIS" to access fields on the class.
+
+
+
+
+Constructor:- is used in the creation of an object.
+It is a special type of code block that has a specific name and parameters,
+much like a method.
+it has the same name as the class itself, and it does not return any values.
+You never include a return type from a constructor, not even void.
+you can, and should, specify an appropriate access modifier to control who
+should be able to create new instances of the class, using this constructor.
+if a class contains no constructor declarations, then a default constructor is
+implicitly declared.
+This constructor has no parameters and is
+often called the no-args(no arguments) constructor.
+If a class contains any other constructor declarations, then a default constructor
+is NOT implicitly declared.
+
+CONSTRUCTOR OVERLOADING is declaring multiple
+constructors with different parameters.
+The number of parameters is the same between two constructors, their types,
+or order of the types must differ.
+Constructor overloading is declaring multiple constructors with different parameters.
+The number of parameters can be different between constructors.
+Or if the number of parameters is the same between two constructor, their types,
+or order of the types must be differ.
+
+CONSTRUCTOR CHAINING:- is when one constructor explicitly
+calls another overloaded constructor.
+You can only use constructor chaining, within constructors.
+You must use the special statement this() to execute another customer, passing it
+arguments if required.
+And this() must be the first executable statement if
+its used from another constructor.

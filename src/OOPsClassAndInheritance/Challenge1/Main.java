@@ -6,27 +6,63 @@ public class Main {
 
         Account bobsAccount = new Account("12345",500,
                 "Bob Brown","myemail.com","(087) 123 -4567");
+        //in above as u can see the constructor is working, we can easily instantiate.
+
+//        Account bobsAccount = new Account();
+//        above code prints empty constructor with default values.
+
+
+        System.out.println(bobsAccount.getAccountNumber());
+        System.out.println(bobsAccount.getBalance());
         bobsAccount.withdrawFunds(100.0);
         bobsAccount.depositFunds(200.0);
 
+
+        Account timsAccount = new Account("Tim","tim@email.com",
+                "12345");
+        System.out.println("Account no: " + timsAccount.getAccountNumber() +
+                " name: " + timsAccount.getCustomerName());
+
     }
 
-    //Constructor:- is used in the creation of an object.
-    //It is a special type of code block that has a specific name and parameters,
-    //much like a method.
-    //it has the same name as the class itself, and it does not return any values.
-    //You never include a return type from a constructor, not even void.
-    //you can, and should, specify an appropriate access modifier to control who
-    //should be able to create new instances of the class, using this constructor.
-    //if a class contains no constructor declarations, then a default constructor is
-    //implicitly declared.
-    //This constructor has no parameters and is
-    //often called the no-args(no arguments) constructor.
-    //If a class contains any other constructor declarations, then a default constructor
-    //is NOT implicitly declared.
-
-    //CONSTRUCTOR OVERLOADING is declaring multiple
-    //constructors with different parameters.
-    //The number of parameters is the same between two constructors, their types,
-    //or order of the types must differ.
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Constructor:- is used in the creation of an object.
+//It is a special type of code block that has a specific name and parameters,
+//much like a method.
+//it has the same name as the class itself, and it does not return any values.
+//You never include a return type from a constructor, not even void.
+//you can, and should, specify an appropriate access modifier to control who
+//should be able to create new instances of the class, using this constructor.
+//if a class contains no constructor declarations, then a default constructor is
+//implicitly declared.
+//This constructor has no parameters and is
+//often called the no-args(no arguments) constructor.
+//If a class contains any other constructor declarations, then a default constructor
+//is NOT implicitly declared.
+
+//CONSTRUCTOR OVERLOADING is declaring multiple
+//constructors with different parameters.
+//The number of parameters is the same between two constructors, their types,
+//or order of the types must differ.

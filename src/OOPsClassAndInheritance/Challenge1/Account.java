@@ -9,12 +9,27 @@ public class Account {
         private String email;
         private String phone;
 
+    public Account() {
+        this("56789",2.50,"Default name",
+                "Default address","Default phone");
+        System.out.println("Empty Constructor is called");
+        //this is constructor with no parameters also called no args-constructor.
+    }
+
     public Account(String accountNumber, double balance, String customerName, String email, String phone) {
+        System.out.println("Constructor with parameters called");
         this.accountNumber = accountNumber;
         this.balance = balance;
         this.customerName = customerName;
         this.email = email;
         this.phone = phone;
+    }//Constructor.
+
+    public Account(String customerName, String email, String phone) {
+        this("9999",100.55,customerName,email,phone);
+//        this.customerName = customerName;
+//        this.email = email;
+//        this.phone = phone;
     }
 
     public void depositFunds(double depositAmount){
