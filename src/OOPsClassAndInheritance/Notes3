@@ -1,0 +1,53 @@
+REFERENCE Vs OBJECT Vs INSTANCE Vs CLASS:-
+
+->Lets use the analogy of building a house to understand classes.
+A class is basically a blueprint for the house.
+Using the blueprint, we can build as many house as we like.
+
+Each house we build(in other words, going back to programming terms,
+each houses we instantiate using the new operator) is an object.
+
+This object can also be known as an instance, Often, we'll say its an
+instance of the class. So, we would have an instance of house in this example.
+
+Getting back to the physical world, each house we build has an address(its built
+at a physical location).
+
+In other words, if we want to tell someone where we live, we
+give them our address(perhaps written on a piece of paper).
+This is known as a Reference.
+
+-> We can copy that reference as many times as we like, but there is still
+just one house that we're referring to.
+In other words, we're copying the paper that has address on it, not the house itself.
+We can pass references as parameters to constructors and methods.
+
+
+
+STATIC Vs INSTANCE variables:-
+
+Static:-
+Declared by using the keyword static.
+Static variables are also known as static member variables.
+Every instance of the class shares the same static variable.
+If changes are made to that variable, all other instances of that class will
+see the effect of that change.
+It is considered best practise to use the class name and not a reference variable to
+access a static variable.
+An instance isn't required to exist to access the value of a static variable.
+Static variables aren't used very often but can sometimes be very useful.
+They can be used for:
+- Storing counters.
+- Generating unique IDs.
+- Storing a constant value that doesn't change, like PI, for example.
+- Creating and controlling access to a shared resource. For example:- log file,
+ database, etc.
+
+Instance:-
+They don't use static variable.
+They're also known as fields or member variables.
+Instance variable belong to a specific instance of a class.
+Each instance has its own copy of an instance variable.
+Every instance can have a different value.
+Instance variables represent the state of a specific instance of a class.
+
