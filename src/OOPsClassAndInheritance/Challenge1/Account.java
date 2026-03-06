@@ -9,45 +9,23 @@ public class Account {
         private String email;
         private String phone;
 
-        public Account() {
-            this("56789",2.50,"Default name",
-                    "default address","default phone");
-            System.out.println("Empty constructor called");
-        }
-        public Account (String accountNumber, double balance, String customerName, String email,
-                        String phone){
-            System.out.println("Account constructor with parameters called");
-            this.accountNumber = accountNumber;
-            this.balance = balance;
-            this.customerName = customerName;
-            this.email = email;
-            this.phone = phone;
-        }
-
-    public Account(String customerName,String email, String phone) {
-        this("99999",105.55,customerName,email,phone);
-//        this.customerName = customerName;
-//        this.email = email;
-//        this.phone = phone;
-    }
-
-    public void depositFunds(double depositAmount){
+        public void depositFunds(double depositAmount){
             balance += depositAmount;
             System.out.println("Deposit of $" + depositAmount + " made. New balace is $"
-            + this.balance);
-    }
+                    + this.balance);
+        }
 
-    public void withdrawFunds(double withdrawalAmount){
+        public void withdrawFunds(double withdrawalAmount){
+          if(balance - withdrawalAmount < 0){
+              System.out.println("Insufficient Funds! You only have $" + balance +
+                      " in you account.");
+          }else{
+              balance -= withdrawalAmount;
+              System.out.println("Withdrawal of $" + withdrawalAmount +
+                      " processed, Remaining balance = $" + this.balance);
+          }
+        }
 
-            if(balance - withdrawalAmount < 0){
-               System.out.println("Insufficient Funds! You only have $" + balance +
-                       " in you account.");
-            }else {
-                balance -= withdrawalAmount;
-                System.out.println("Withdrawal of $" + withdrawalAmount +
-                        " processed, Remaining balance = $" + balance);
-            }
-    }
     public String getAccountNumber() {
         return accountNumber;
     }
@@ -56,7 +34,7 @@ public class Account {
         this.accountNumber = accountNumber;
     }
 
-    public double getAccountBalance() {
+    public double getBalance() {
         return balance;
     }
 
