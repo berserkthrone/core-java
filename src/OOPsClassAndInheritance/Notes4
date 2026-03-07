@@ -1,0 +1,20 @@
+PLAIN OLD JAVA OBJECT:-
+
+A plain old java object (whose acronym is POJO) is a class that generally only has
+instance fields.
+It's used to house data and pass data between functional classes.
+It usually has no other, or very few methods, other than getters and setters
+for the instance fields.
+Many databases frameworks use POJO's to read data from, or to write data to
+databases, files or streams.
+
+A POJO also might br called a bean or javaBean.
+A javaBean is just a POJO with some extra rules applied to it.
+A POJO is sometimes called an Entity because it mirrors data base entities.
+Another acronym is DTO for Data Transfer Object.
+It's a description of an object that can be modeled as just data.
+
+There are many generation tools that will turn a data model into generated POJO's
+or javaBeans.
+You've seen an example of similar code generation in intellij, which allowed me to
+generate getters, setters, and constructors in a uniform way.
