@@ -51,3 +51,24 @@ Each instance has its own copy of an instance variable.
 Every instance can have a different value.
 Instance variables represent the state of a specific instance of a class.
 
+
+STATIC Vs INSTANCE methods:-
+
+Static:-
+Static methods are declared using a static modifier.
+Static methods can't access instance methods and instant variables directly.
+They're usually used for operations that don't require any data from an
+instance of the class(from 'this').
+If you remember, the this keyword is the current instance of a class.
+Inside a static method,we can't use the THIS keyword.
+Whenever you see a method that doesn't use instance variables, that method should
+probably be declared as a static method.
+For example, main is a static method and its called by the java virtual machine (JVM)
+when it starts by java application.
+
+Instance:-
+Instance methods belong to an specific instance of a class.
+To use an instance method, we have to instantiate the class first, usually by
+using the new keyword.
+Instance methods can access instance methods and instance variables directly.
+Instance methods can also access static methods and static variables directly.
