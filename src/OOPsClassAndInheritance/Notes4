@@ -8,7 +8,7 @@ for the instance fields.
 Many databases frameworks use POJO's to read data from, or to write data to
 databases, files or streams.
 
-A POJO also might br called a bean or javaBean.
+A POJO also might be called a bean or javaBean.
 A javaBean is just a POJO with some extra rules applied to it.
 A POJO is sometimes called an Entity because it mirrors data base entities.
 Another acronym is DTO for Data Transfer Object.
