@@ -18,3 +18,77 @@ There are many generation tools that will turn a data model into generated POJO'
 or javaBeans.
 You've seen an example of similar code generation in intellij, which allowed me to
 generate getters, setters, and constructors in a uniform way.
+
+ANNOTATIONS:-
+
+Annotations are a type of metadata.
+Metadata is a way to formally describe additional information about our code.
+Annotations are more structured and have more meaning than comments.
+This is because they can be used by the compiler or other types of pre-processing
+functions, to get information about our code.
+Metadata doesn't affect how the code runs so this code will still run with or
+without the annotations.
+
+
+OVERRIDDEN METHODS:-
+
+An overridden method is not same as overloaded method.
+An overridden method is a special method in java that other classes can implement
+if they use a specified method signature.
+
+--------------------------------------------------------------------------------------
+
+I talked about the the PLain Old Java Object, and I showed you how it comes with a
+lot of boilerplate code(using generation for generating getter setters and all).
+It's the code that's repetitive and follow certain rules.
+Once created, this code is rarely looked at, or modified.
+In fact, there are tools that'll just regenerate all of this code if your underlying
+data or domain model changes.
+
+The better alternative to POJO is THE RECORD.
+
+----------------------------------------------------------------------------------------
+
+THE RECORD TYPE:-
+
+The record was introduced in JDK 14 and became officially part of java in JDK 16.
+It's purpose is to replace the boilerplate code of the pojo but to be more restrictive.
+Java calls them "plain data carriers".
+The word carries is an important term because it means that the RECORD has more rules
+built-in than a POJO would.
+
+The record is a special class that contains data that's not meant
+to be altered or basically immutable.
+In other words, it seeks to achieve immutability for the data in its members.
+That's why it only contains the most fundamental methods such as constructors and
+accessors(GETTERS) but NO mutators(setters).
+
+
+IMPLICIT OR GENERATED CODE that Java Provides:-
+
+What does Java tell us about what is implicitly created when we declare a record
+as I did in this code?
+
+public record LPAStudent(String id, String name, String dateOfBirth, String classList){}
+
+First, it's important to understand that the part that's in parentheses, is called
+the record header.
+For each component in the header, java generates:
+->A field with the same name and declared type as the record component.
+->The field is declared private and final.
+->The field is sometimes referred to as a component field.
+
+Java generates a toString method that prints out each attribute in a formatted String.
+In addition to creating a private and final field for each component, Java generates
+a public accessor method for each component.
+This method has the same name and type of the component, but it doesn't have any kind
+of special prefix like get or is, for example.
+The accessor method for id, in this example, is simply id().
+
+---------------------------------------------------------------------------------------------
+
+Why have an immutable record?
+There are more use cases for immutable data transfers objects and
+keeping them well encapsulated.
+It protect the data from unintended mutations.
+

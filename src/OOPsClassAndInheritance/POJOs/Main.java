@@ -26,5 +26,16 @@ public class Main {
 
         System.out.println(pojoStudent);
         System.out.println(recordStudent);
+
+
+        pojoStudent.setClassList(pojoStudent.getClassList() + ", JAVA OCP Exam 829");
+//        pojoStudent.setClassList(pojoStudent.getClassList() + ", JAVA OCP Exam 829");
+//        above line is commented out because it wont work anyway record is immutable it
+//        cant be mutated.
+        System.out.println(pojoStudent.getName() + " is taking " +
+                 pojoStudent.getClassList());
+
+        System.out.println(recordStudent.name() + " is taking " +
+                recordStudent.classList());
     }
 }
