@@ -14,7 +14,6 @@ I cam say Animal is a parent or super class of Dog.
 A class can specify one and only one class in its extends clause.
 
 super() :-
-
 super() is a lot like this().
 It's a way to call a constructor on the super class directly from the sub class's
 constructor.
@@ -27,3 +26,9 @@ if your super class doesn't have a default constructor, then you
 must explicitly call super() in all your constructors, passing the right
 arguments to that constructor.
 
+Overriding a method:-
+Overriding a method is when you create a method on a subclass, which has the same
+signature as a method on a super class.
+
+You override a parent class method when you want the child class to show different
+behaviour for that method.
