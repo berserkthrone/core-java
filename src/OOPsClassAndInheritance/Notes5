@@ -1,0 +1,29 @@
+INHERITANCE:-
+
+We can look at inheritance as a form of code reuse.
+
+It's a way to organize class into a parent-child hierarchy, which lets the child
+inherit(reuse), fields and methods from its parent.
+
+EXTENDS:-
+
+Using extends specifies the superclass (or the parent class)
+of the class we're declaring.
+I can say Dog is a subclass or child class of animal.
+I cam say Animal is a parent or super class of Dog.
+A class can specify one and only one class in its extends clause.
+
+super() :-
+
+super() is a lot like this().
+It's a way to call a constructor on the super class directly from the sub class's
+constructor.
+Like this(), it has to be the first statement of the constructor.
+Because of that rule, this() and super() can never be called from the same constructor.
+
+if you don't make a call to super(), then java makes it for you using super's default
+constructor.
+if your super class doesn't have a default constructor, then you
+must explicitly call super() in all your constructors, passing the right
+arguments to that constructor.
+

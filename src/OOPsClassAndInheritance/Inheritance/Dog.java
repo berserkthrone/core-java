@@ -7,11 +7,13 @@ public class Dog extends Animal {
 
     public Dog() {
         super("Mutt", "Big", 50);
+        // super is the way to call the constructor on the parent class or super class.
     }
-    public Dog(String type, double weight){
 
+    public Dog(String type, double weight){
         this(type, weight,"Perky","Curled");
     }
+
     public Dog(String type, double weight, String earShape, String tailShape) {
         super(type, weight < 15 ? "small" : (weight < 35 ? "medium" : "Large"), weight);
         this.earShape = earShape;
