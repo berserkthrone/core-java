@@ -10,11 +10,19 @@ public class main {
         System.out.println("Age = "+ tim.getAge());
         System.out.println("Pay = " + tim.collectPay());
 
-        Employee jack = new Employee("Jack", "20/02/2005",
-                "15/02/2026");
+        SalariedEmployee jack = new SalariedEmployee("Jack", "20/02/2005",
+                "15/02/2026",350000);
         System.out.println(jack);
-        System.out.println("Age = "+ jack.getAge());
-        System.out.println("Pay = " + jack.collectPay());
+        System.out.println("Jack's Paycheck = $" + jack.collectPay());
+
+        jack.retire();
+        System.out.println("Jack's Pension check = $" + jack.collectPay());
+
+        HourlyEmployee mary = new HourlyEmployee("Mary", "11/11/2005",
+                "11/11/2026",250000);
+        System.out.println(mary);
+        System.out.println("Mary's Paycheck = $" + mary.collectPay());
+        System.out.println("Mary's holiday pay = $" + mary.getDoublePay());
     }
 
 }

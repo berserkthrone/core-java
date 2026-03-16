@@ -11,10 +11,15 @@ public class Worker {
 
     }
 
-
     public Worker(String name, String birthDate) {
         this.name = name;
         this.birthDate = birthDate;
+    }
+
+    public Worker(String name, String birthDate, String hireDate) {
+        this.name = name;
+        this.birthDate = birthDate;
+        this.endDate = hireDate;
     }
 
     public int getAge(){
