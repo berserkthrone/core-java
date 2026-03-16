@@ -47,3 +47,32 @@ variable or field.
 NOTE:- We can use either of these two keywords anywhere in class except for static
 elements such as a static method. Any attempt to do so will lead to compile
 time errors.
+
+
+Method Overloading:-
+
+To the code calling an overloaded method, it looks like a single method can be
+called with different sets of arguments.
+In actually, each call that's made with a different set of arguments is calling
+a separate method.
+Jva developers often refer to method overloading, as compile-time polymorphism.
+This means the compiler is determining the right method to call, based on the method
+name and argument list.
+
+Usually overloading happens within a single class.
+But methods can also be overloaded by subclasses.
+That's because a subclass inherits one version of the methods from the parent class, and
+then the subclass can have another overloaded version of that method.
+
+
+
+Method Overriding:-
+
+Method overriding, means defining a method in child class that already exists in the
+parent class, with the same signature( the same name, same parameters).
+By extending the parent class, the child class gets all the methods defined in the
+parent class. Those methods are also known as derived methods.
+Method overriding is also known as Runtime Polymorphism or Dynamic Method Dispatch
+because the method that is going to be called is decided at runtime by the java virtual
+machine.
+We ant override the static methods, only instance methods can be overridden.
