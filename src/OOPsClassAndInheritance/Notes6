@@ -4,3 +4,13 @@ A text Block is just a special format for multi-line String literals.
 It's simply a String with a new representation in the source code.
 It became part of the official language as of JDK 15.
 
+String Vs String Builder:-
+
+Java provides a mutable class that lets us change its text value.
+This is the StringBuilder class.
+
+String Methods Vs String Builder Methods:-
+
+String methods create a new object in memory and return a reference to this new object.
+StringBuilder methods return a new StringBuilder reference, but it's really a
+self-reference.
