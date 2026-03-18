@@ -14,6 +14,8 @@ public class Product {
     }
 }
 
+//composition with inheritance:-
+
 class Monitor extends Product {
 
     private int size;
