@@ -1,5 +1,7 @@
 COMPOSITION:-
 Composition is another component of object-oriented programming.
 It defines a HAS A relationship.
-
 where INHERITANCE defines a IS A relationship.
+Inheritance is a way to reuse the functionality and attributes.
+COMPOSITION is a way to make the combination of classes act like a single coherent
+object.
