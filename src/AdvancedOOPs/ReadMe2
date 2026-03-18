@@ -1,0 +1,31 @@
+What does Encapsulation means?
+->In Java, encapsulation means hiding things by making them private or inaccessible.
+
+Why do we want to hide things in Java?
+->To make the interface simpler, we may want to hide unnecessary details.
+->To protect the integrity of data on an object, we may hide or restrict access
+to some of the data and operations.
+->To decouple the publishes interface from the internal details of the class, we may
+hide actual names and types of class members.
+
+The problems when classes aren't properly encapsulated:-
+1)Allowing direct access to data on an object can bypass checks and operations.
+2)It encourages an interdependency or coupling between calling code and the class.
+3)And the calling code had to take on the responsibility for properly initializing a
+new player.
+
+
+Benefits of Encapsulation:-
+That's really one of the huge benefits of encapsulation. Changes made do not affect
+any other code.
+It's like a black box in many ways.
+
+Staying in Control
+This is why you want to use encapsulation.
+We protect the members of the class and some methods from external access.
+This prevents calling code from bypassing the rules and constraints,
+we've built into the class.
+When I create a new instance, it's initialized with valid data.
+But likewise, I'm also making sure that there's no direct access to the fields.
+That's why you want to always use encapsulation.
+It's something that you should really get used to and use.

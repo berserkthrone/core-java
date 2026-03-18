@@ -1,0 +1,19 @@
+POLYMORPHISM:-
+Polymorphism in Java allows us to write code that can call a method, but the actual method that
+ gets executed can be different for different objects at runtime.
+This means that the behavior that occurs during program execution depends on the runtime type of
+the object, which might differ from its declared type in the code.
+For polymorphism to work, the declared type must have a relationship with the runtime type.
+Inheritance is one way to establish this relationship, where a subclass can override a method from
+its superclass, enabling polymorphic behavior.
+There are other mechanisms to achieve polymorphism, but in this discussion, we'll focus on using
+inheritance to support polymorphism.
+
+
+
+Whats is var?
+
+var is a special contextual keyword in Java that lets our code take advantage of local
+Variable Type Inference.
+
+By using var as the type,we're telling Java to figure out the compile-time type for us.
