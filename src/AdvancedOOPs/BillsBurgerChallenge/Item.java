@@ -12,8 +12,6 @@ public class Item {
         this.name = name.toUpperCase();
         this.price = price;
     }
-    //include all the fields except size but why?
-
 
     public String getName() {
 
@@ -26,7 +24,6 @@ public class Item {
     public double getBasePrice() {
         return price;
     }
-    //added getters for name and price fields but not for other two??
 
     public double getAdjustedPrice() {
         return switch (size){
