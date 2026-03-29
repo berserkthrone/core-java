@@ -10,9 +10,8 @@ public class Main {
         int[] firstArray = getRandomArray(10);
         System.out.println(Arrays.toString(firstArray));
 
-        int[] sortedArray = sortIntegers(new int[] {7, 30, 35});
+        int[] sortedArray = sortIntegers(firstArray);
         System.out.println(Arrays.toString(sortedArray));
-
 
     }
 
@@ -39,7 +38,7 @@ public class Main {
                     sortedArray[i] = sortedArray[i + 1];
                     sortedArray[i + 1] = temp;
                     flag = true;
-                    System.out.println("---->" + Arrays.toString(sortedArray));
+//                    System.out.println("---->" + Arrays.toString(sortedArray));
                 }
             }
             System.out.println(Arrays.toString(sortedArray));
