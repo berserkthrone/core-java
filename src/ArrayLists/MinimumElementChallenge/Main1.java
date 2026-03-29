@@ -4,37 +4,62 @@ import java.util.Scanner;
 
 public class Main1 {
 
-    public class MinimumElement {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-        private static int readInteger() {
+        int count = readInteger(scanner);
+        int[] numbers = readElements(scanner, count);
+        int min = findMin(numbers);
 
-            Scanner scanner = new Scanner(System.in);
-            System.out.print("Enter count: ");
-            int count = scanner.nextInt();
-            return count;
+        System.out.println("Minimum number is " + min);
+    }
+        private static int readInteger(Scanner scanner) {
+        int count;
+
+        while(true){
+            System.out.println("enter count: ");
+
+            if(scanner.hasNextInt()){
+                count = scanner.nextInt();
+
+                if(count > 0){
+                    return count;
+                }else{
+                    System.out.println("Count must be positive");
+                }
+            }else{
+                System.out.println("Invalid Input. Enter a valid Integer.");
+                        scanner.next();
+            }
+        }
         }
 
-        private static int[] readElements(int count) {
+        private static int[] readElements(Scanner scanner,  int count) {
 
-            Scanner scanner = new Scanner(System.in);
             int[] array = new int[count];
-            for (int i = 0; i < array.length; i++) {
-                System.out.print("Enter a number: ");
-                int number = scanner.nextInt();
-                array[i] = number;
+            int i =0;
+            while(i < count){
+                System.out.println("enter element "+ (i+1) + ":");
+
+                if(scanner.hasNextInt()){
+                    array[i] = scanner.nextInt();
+                    i++;
+                }else{
+                    System.out.println("Invalid Input. Enter a valid Integer.");
+                    scanner.next();
+                }
             }
             return array;
         }
 
         private static int findMin(int[] array) {
 
-            int cmv = Integer.MAX_VALUE;                 // 1
+            int min = Integer.MAX_VALUE;                 // 1
             for (int i = 0; i < array.length; i++) {     // 2
-                if (array[i] < cmv) {                    // 3
-                    cmv = array[i];                      // 4
+                if (array[i] < min) {                    // 3
+                    min = array[i];                      // 4
                 }
             }
-            return cmv;
+            return min;
         }
     }
-}
