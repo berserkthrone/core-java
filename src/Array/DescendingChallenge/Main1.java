@@ -1,4 +1,4 @@
-package ArrayLists.DescendingChallenge;
+package Array.DescendingChallenge;
 
 import java.util.Scanner;
 

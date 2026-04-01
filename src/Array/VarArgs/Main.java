@@ -1,4 +1,4 @@
-package ArrayLists.VarArgs;
+package Array.VarArgs;
 
 public class Main {
 

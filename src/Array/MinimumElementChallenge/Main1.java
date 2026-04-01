@@ -1,4 +1,4 @@
-package ArrayLists.MinimumElementChallenge;
+package Array.MinimumElementChallenge;
 
 import java.util.Scanner;
 

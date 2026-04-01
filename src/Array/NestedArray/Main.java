@@ -1,4 +1,4 @@
-package ArrayLists.NestedArray;
+package Array.NestedArray;
 
 import java.util.Arrays;
 
